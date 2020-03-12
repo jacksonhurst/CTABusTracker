@@ -1,0 +1,82 @@
+html, body{
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#selectorBody {
+  padding-top: 40px;
+}
+
+#header {
+    height: 40px;
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#headertext {
+  font-size: 27px;
+  color:white;
+  margin-left:20px;
+  width: 90%;
+}
+
+#backbutton {
+  margin-left:10px;
+  margin-top:6px;
+  width: 10%;
+  float: left;
+}
+
+#list {
+  padding-top: 40px;
+}
+
+#breaker {
+    height: 3px;
+    background-color: #333333;
+}
+
+#bus {
+  width: 100%;
+  height: 220px;
+  background-color: #194ab4;
+  margin: auto;
+  color: white;
+}
+
+#vehicleId {
+    padding-left: 10px;
+    font-size: 40px;
+}
+
+#predictedTime {
+    padding-top: 60px;
+    padding-right: 10px;
+    text-align: right;
+    font-size: 60px;
+}
+
+#destination {
+    padding-left: 10px;
+    font-size: 12vh;
+    font-weight:bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+#left {
+  width: 75%;
+  float: left;
+}
+
+#right {
+  margin-left: 25%;
+}

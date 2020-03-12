@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Incoming Busses</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="request.js"></script>
+
+  <script>
+    function hidden(){
+      var busBody = document.getElementById("busBody");
+      busBody.style.display = "none";
+
+      var backButton = document.getElementById("backbutton");
+      backButton.style.display = "none";
+    }
+
+    function busFunction() {
+      var x = document.getElementById("stpid").value;
+      var headerText = document.getElementById("headertext");
+      headerText.innerHTML = "Incoming CTA Busses for Stop " + x;
+      var selectorBody = document.getElementById("selectorBody");
+      selectorBody.style.display = "none";
+      
+      var busBody = document.getElementById("busBody");
+      busBody.style.display = "block";
+
+      var backButton = document.getElementById("backbutton");
+      backButton.style.display = "block";
+
+      repeatRequest(x);
+    }
+
+    function backFunction() {
+      var headerText = document.getElementById("headertext");
+      headerText.innerHTML = "CTA Bus Tracker";
+
+      var selectorBody = document.getElementById("selectorBody");
+      selectorBody.style.display = "block";
+      
+      var busBody = document.getElementById("busBody");
+      busBody.style.display = "none";
+
+      var backButton = document.getElementById("backbutton");
+      backButton.style.display = "none";
+
+      clearBusInterval();
+    }
+    </script>
+
+</head>
+
+<body onload="hidden()">
+  <div id="header">
+    <button onclick="backFunction()" id="backbutton">Back</button>
+    <p id="headertext">CTA Bus Tracker</p>
+  </div>
+  <div id="selectorBody">
+    Bus Stop ID: <input id="stpid" type="text" name="fname" value="">
+    <button onclick="busFunction()">Submit</button>
+  </div>
+
+  <div id="busBody">
+    <div id="list">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
