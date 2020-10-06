@@ -41,6 +41,6 @@
     "electron-builder": "^22.4.0"
   },
   "dependencies": {
-    "papaparse": "^5.1.1"
+    "papaparse": "^5.2.0"
   }
 }
